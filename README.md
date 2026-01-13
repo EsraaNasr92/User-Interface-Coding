@@ -18,6 +18,8 @@ The goal of this repo is to practice UI concepts, improve problem-solving skills
 ## Tasks Included
 
 ### 1. Accordion Component
+### 2. Counter Component
+### 3. Contact Form Component
 
 **Concepts practiced:**
 - React state management
