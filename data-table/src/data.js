@@ -1,0 +1,17 @@
+export const data = [
+    { id: 1, name: "Ahmed", age: 24, role: "Frontend" },
+    { id: 2, name: "Sara", age: 27, role: "Backend" },
+    { id: 3, name: "Omar", age: 22, role: "Student" },
+    { id: 4, name: "Esraa", age: 24, role: "Frontend" },
+    { id: 5, name: "Amira", age: 27, role: "Backend" },
+    { id: 6, name: "Yahya", age: 22, role: "Student" },
+    { id: 7, name: "Youness", age: 24, role: "Frontend" },
+    { id: 8, name: "Rakan", age: 27, role: "Backend" },
+    { id: 9, name: "Asmaa", age: 22, role: "Student" },
+    { id: 10, name: "Ahmed", age: 24, role: "Frontend" },
+    { id: 11, name: "Nouran", age: 27, role: "Backend" },
+    { id: 12, name: "Yara", age: 22, role: "Student" },
+    { id: 13, name: "Noor", age: 24, role: "Frontend" },
+    { id: 14, name: "Adham", age: 27, role: "Backend" },
+    { id: 15, name: "Hend", age: 22, role: "Student" },
+];
