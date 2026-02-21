@@ -1,47 +1,36 @@
-import {
-    flexRender,
-    getCoreRowModel,
-    useReactTable,
-} from "@tanstack/react-table";
+import { useState } from 'react';
+import users from './data';
 
-export default function Table({ data, columns }) {
-    const table = useReactTable({
-        data,
-        columns,
-        getCoreRowModel: getCoreRowModel(),
-    });
+export default function Table() {
+    const [message, setMessage] = useState('Data Table');
 
     return (
-        <table border="1" cellPadding="10">
-        <thead>
-            {table.getHeaderGroups().map(headerGroup => (
-            <tr key={headerGroup.id}>
-                {headerGroup.headers.map(header => (
-                <th key={header.id}>
-                    {flexRender(
-                    header.column.columnDef.header,
-                    header.getContext()
-                    )}
-                </th>
+        <div>
+        <h1>{message}</h1>
+        <table>
+            <thead>
+            <tr>
+                {[
+                { label: 'ID', key: 'id' },
+                { label: 'Name', key: 'name' },
+                { label: 'Age', key: 'age' },
+                { label: 'Occupation', key: 'occupation' },
+                ].map(({ label, key }) => (
+                <th key={key}>{label}</th>
                 ))}
             </tr>
+            </thead>
+            <tbody>
+            {users.map(({ id, name, age, occupation }) => (
+                <tr key={id}>
+                <td>{id}</td>
+                <td>{name}</td>
+                <td>{age}</td>
+                <td>{occupation}</td>
+                </tr>
             ))}
-        </thead>
-
-        <tbody>
-            {table.getRowModel().rows.map(row => (
-            <tr key={row.id}>
-                {row.getVisibleCells().map(cell => (
-                <td key={cell.id}>
-                    {flexRender(
-                    cell.column.columnDef.cell ?? cell.column.columnDef.accessorKey,
-                    cell.getContext()
-                    )}
-                </td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
+            </tbody>
         </table>
+        </div>
     );
 }
