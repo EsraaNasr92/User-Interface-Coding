@@ -27,3 +27,19 @@ function themeSwitcher(theme){
 }
 
 console.log(themeSwitcher("dark"));
+
+/* Another way */
+function themeSwitcher(value){
+    const result = {};
+
+    if(value === "dark"){
+        result.backgroundColor = "Black";
+        result.color = "white";
+    }else{
+        result.backgroundColor = "White";
+        result.color = "Black";
+    }
+    return result;
+}
+
+console.log(themeSwitcher("light"));
